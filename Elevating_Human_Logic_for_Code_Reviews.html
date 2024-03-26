@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+        <html>
+        <head>
+            <meta charset="UTF-8">
+            <title>Elevating Human Logic for Code Reviews</title>
+            <style>
+/* From extension vscode.github */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.vscode-dark img[src$=\#gh-light-mode-only],
+.vscode-light img[src$=\#gh-dark-mode-only],
+.vscode-high-contrast:not(.vscode-high-contrast-light) img[src$=\#gh-light-mode-only],
+.vscode-high-contrast-light img[src$=\#gh-dark-mode-only] {
+	display: none;
+}
+
+</style>
+            
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item {
+    list-style-type: none;
+}
+
+.task-list-item-checkbox {
+    margin-left: -20px;
+    vertical-align: middle;
+    pointer-events: none;
+}
+</style>
+<style>
+:root {
+  --color-note: #0969da;
+  --color-tip: #1a7f37;
+  --color-warning: #9a6700;
+  --color-severe: #bc4c00;
+  --color-caution: #d1242f;
+  --color-important: #8250df;
+}
+
+</style>
+<style>
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-note: #2f81f7;
+    --color-tip: #3fb950;
+    --color-warning: #d29922;
+    --color-severe: #db6d28;
+    --color-caution: #f85149;
+    --color-important: #a371f7;
+  }
+}
+
+</style>
+<style>
+.markdown-alert {
+  padding: 0.5rem 1rem;
+  margin-bottom: 16px;
+  color: inherit;
+  border-left: .25em solid #888;
+}
+
+.markdown-alert>:first-child {
+  margin-top: 0
+}
+
+.markdown-alert>:last-child {
+  margin-bottom: 0
+}
+
+.markdown-alert .markdown-alert-title {
+  display: flex;
+  font-weight: 500;
+  align-items: center;
+  line-height: 1
+}
+
+.markdown-alert .markdown-alert-title .octicon {
+  margin-right: 0.5rem;
+  display: inline-block;
+  overflow: visible !important;
+  vertical-align: text-bottom;
+  fill: currentColor;
+}
+
+.markdown-alert.markdown-alert-note {
+  border-left-color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-note .markdown-alert-title {
+  color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-important {
+  border-left-color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-important .markdown-alert-title {
+  color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-warning {
+  border-left-color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-warning .markdown-alert-title {
+  color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-tip {
+  border-left-color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-tip .markdown-alert-title {
+  color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-caution {
+  border-left-color: var(--color-caution);
+}
+
+.markdown-alert.markdown-alert-caution .markdown-alert-title {
+  color: var(--color-caution);
+}
+
+</style>
+        
+        </head>
+        <body class="vscode-body vscode-light">
+            <h1 id="elevating-human-logic-for-code-reviews">Elevating Human Logic for Code Reviews</h1>
+<p>A code review is a powerful tool, used as a mean</p>
+<ul>
+<li>to improve the quality of the code,</li>
+<li>to share and spread knowledge,</li>
+<li>to establish guidelines</li>
+<li>to maintain code quality</li>
+<li>to keep team consistent</li>
+</ul>
+<p><em>Though, the way code reviews are done can result
+to consequences such hurt feelings, brokwn interpersonal relationships.
+That is mostly true when done in a wrong way.</em></p>
+<p>For this reason, it is important to put human first
+approaches on this process.</p>
+<p><strong>This document aims to provide advice and guidance
+for both the author and the reviewer of a Pull Request (PR), having in mind
+constructful, respectful and effective interactions.</strong></p>
+<p>TL;DR</p>
+<p>An author's mindset</p>
+<ul>
+<li>Knowledge exchange</li>
+<li>YOu are on the same side
+<ul>
+<li>Both (author &amp; reviewer) work for the same employer and for the same purpose as well</li>
+</ul>
+</li>
+<li>Be open to new perspectives/approaches</li>
+<li>Be thankful</li>
+<li>You are not equal to your code</li>
+<li>IKEA Effect</li>
+<li>Be humble</li>
+</ul>
+<p>A reviewer's mindset:</p>
+<ul>
+<li>Messages starting with <code>I</code> not <code>You</code></li>
+<li>Give praise</li>
+<li>Ask questions</li>
+<li>(Only) Talk about the code</li>
+<li>Talk about the behavior</li>
+<li>OIR Rule</li>
+</ul>
+<h2 id="authors-approach-for-reviews">Author's approach for reviews</h2>
+<p>As an author, you are going to receive feedback for your work. For this reason,
+it is important to be open and welcome the others' opinion, as well as to be humble.</p>
+<h3 id="humble-what">Humble-what?</h3>
+<p>It is normal (and commonly expectedd) to make mistakes, as long as code is written by humans.
+Of course, that it does not mean that <br> you should write down your code without giving the appropriate
+case. Having a team which consists of developers that accept and admit ther mistakes is desired. <br>
+That helps the team to accept comments and critism on a review.</p>
+<p>It also helps to avoid having endless discussions &amp; rejections, because some may think that introducing
+bugs is seen as something forbidden and keep them hidden. <br>This is the opposite to be open for feedback.</p>
+<blockquote>
+<p>Having buds on your code is accepted and recognizing them is desired.</p>
+</blockquote>
+<p>Our profession never stops evolving. You have to admit that nobody's is perfect,
+to accept that you can make mistakes and despite how good your are, <br> you can still
+learn new things and improve (yourself).</p>
+<p>You are not unmistakable or unbuggable and you don't need to link
+your credibility as a developer with possible mistakes that can appear in your code.
+After all, you are a human, so please <strong>be humble</strong>.</p>
+<p>Additionally, being a member of a team with a leader that can accept critism on
+mistakes is crucial. <em>In the end, you always learn from your mistakes.</em></p>
+<h3 id="you-are-not-equal-to-your-code">You are not equal to your code</h3>
+<p>When someone provides you with comments and critisism on your your code,
+it is not a critisism on you personnally. Remember: don't link your reliability with the code
+you write. <br> Your personality and your work still counts in your team.
+Being a programmer, does not mean that you are perfect in everything from day 1.
+<em>As said, it is a never ending evolving skill.</em></p>
+<h3 id="you-are-on-the-same-side">You are on the same side</h3>
+<p>Read this quote first:</p>
+<blockquote>
+<p>“Criticism is almost never personal in a professional software engineering environment — it’s usually just part of the process of making a better product.&quot;
+<a href="https://book.debuggingteams.com">Fitzpatrick, Collins-Sussman: Debugging Teams, page 16</a></p>
+</blockquote>
+<p>Please make sure that you always have in mind that both the reviewer and you, are on the same side.</p>
+<h3 id="ikea-effect">IKEA Effect</h3>
+<blockquote>
+<p>The IKEA effect is a cognitive bias in which consumers place a disproportionately high value on products they partially created. <br>The name refers to Swedish
+manufacturer and furniture retailer IKEA, which sells many items of furniture that require assembly. <em>source: <a href="https://en.wikipedia.org/wiki/IKEA_effect">Wikipedia</a></em></p>
+</blockquote>
+<p>What exactly is this?</p>
+<blockquote>
+<p>A 2011 study found that subjects were willing to pay 63% more for furniture they had assembled themselves than for equivalent pre-assembled items.[1]
+<em>source: <a href="https://en.wikipedia.org/wiki/IKEA_effect">Wikipedia</a></em></p>
+</blockquote>
+<p>It is totally ok think of your code as something valuable, probably the best in the market. I am sure that you gave the best of yourself. <br>
+Though this, does not mean that your code cannot accept any changes or you might need to refactor a portion of it.
+So we need to have in mind the IKEA effect and not being influenced by it.</p>
+<p>References:</p>
+<ul>
+<li><a href="https://stitcher.io/blog/the-ikea-effect">1</a></li>
+<li><a href="https://betterprogramming.pub/the-ikea-effect-when-people-delete-our-code-243405c151f3">2</a></li>
+</ul>
+<h3 id="different-aspectsperspectives-on-your-code">Different Aspects/Perspectives on your Code</h3>
+<p>Each developer can have a different technical background, different approaches
+on certain things, experiences, etc; <br>That applies as well for the reviewers of your code.
+It is quite possible to see your code in an different way that yours. <br>
+Plus, your code apporach and its concept is not as common for them as to you.
+This, of course does not mean that your code cannot contain a mistake, even a little one.</p>
+<p>For instance,</p>
+<pre><code>@Composable
+fun myComposable(card: CardModel){
+    if(card.type == CardType.Credit || card.type == CardType.Debit) {}
+}
+</code></pre>
+<p>A common set of questions of the code sample above is</p>
+<ul>
+<li>When does this take place?</li>
+<li>Why having business logic in your composable? I think that we should place it somewhere else</li>
+</ul>
+<p>All of them are pretty much correct. However the reviewer is not always
+able to understand and have the same knowledge of the code as you.</p>
+<p>A (better) approach is:</p>
+<pre><code>//constants.kt
+val billableCards = listOf(CardType.Credit, CardType.Debit)
+//or better
+fun CardType.isBillableCard(cardType)
+
+val isBillableCard = cardType in billableCards
+
+if(isBillableCard){...}
+
+</code></pre>
+<p>The pattern we discuss here is called <strong><a href="https://bloomfire.com/blog/implicit-tacit-explicit-knowledge/">implicit knowledge</a></strong>. It is common and normal for not to be able to see this.<br>
+However, it is better that there might be someone that can have a different perspective than yours.
+So, welcome the constructive critisism, be open, be humble and thank your reviewers for giving
+you different approaches on your code.</p>
+<h3 id="exchange-knowledge">Exchange Knowledge</h3>
+<p>You are members of the same team (or chapter) and dot't forget that you are working
+for the same product.</p>
+<p>Code reviews through PRs are a great means to establish standard patterns and conventions, maintain
+your architecture and exchange knowledge &amp; best practices. <br> I would say
+that you need to think of them a great source of knowledge.</p>
+
+            
+            
+        </body>
+        </html>
