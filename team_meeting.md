@@ -1,4 +1,4 @@
-# Team Meeting `Compose Frenzy` + Team Document `Prodigy`
+# Team Meeting + Team Document
 
 ## Standard Development Practices
 
