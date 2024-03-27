@@ -48,4 +48,6 @@ A reviewer's mindset:
 
 
 
-
+# References
+* [Compassionate (Yet Candid) Code Reviews](https://www.slideshare.net/slideshow/compassionate-yet-candid-code-reviews/113119451)
+* [Debugging Teams](https://www.debuggingteams.com/)

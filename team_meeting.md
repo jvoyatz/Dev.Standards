@@ -1,4 +1,4 @@
-# Team Talk + Team Doc/Guide/What?
+# Team Meeting `Compose Frenzy` + Team Document `Prodigy`
 
 ## Standard Development Practices
 
@@ -10,8 +10,8 @@ should reach high quality levels.
 
 **tl;dr**
 * First things first, as developers we are familiar to tools like Git, ReadMe files and IDEs.
-* With the aim of continuously increasing the team's cohesion, we will arrange a meeting called __Team Talk?__
-* Following this meeting, everything discussed and agreed in this, will be written in a document called __Team Guide__ which
+* With the aim of continuously increasing the team's cohesion, we will arrange a meeting called `Compose Frenzy`
+* Following this meeting, everything discussed and agreed in this, will be written in a document called `Prodigy` which
   as a central point of look up
 * It is essential for the whole to be involed in this meeting, where we will discuss, debate and decide for certain things.
   In the end, it is about how team approaches certain things or how easy will be the onboarding for a new joiner
@@ -48,7 +48,7 @@ For the team, the goal is dual:
 
 Introducing the ...
 
-### The weekly `Tech Talk` meeting
+### The weekly `Compose Frenzy` meeting
 
 Whatever discussed in this meeting, affects every member of the team. So, each memmber should 
 be involved in the process of making decision. This is not a meeting for senior devs only, each one's
@@ -56,19 +56,17 @@ opinion has an impact, which will help to motivate other developers of the team 
 
 Discussion topics can be:
 * Conventions, either naming or something else
-* Approache
-* Code Review 
+* Approaches
+* Code Reviews
 * Libraries
 * Testing
 
 How will each meeting end up?
-Each meeting should end with a solid decision on a certain topic, while the team makes a commitment with this decision.
-Apparently,this decision will not only stay on words but it will be written down on a document. 
-
-We are not daydreaming!
+Each meeting should end up with a solid decision on a certain topic, while the team makes a commitment to.
+Apparently,this decision will be written down on a document. 
 
 
-### The `Team Guide` Document
+### The Team's `Prodigy` Document
 
 Given a first templated found on a certain repo in our git host, after having finished a meeting, 
 someone will be responsible to write the desicions taken in the meeting.

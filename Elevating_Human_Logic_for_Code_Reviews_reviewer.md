@@ -1,4 +1,4 @@
-## Reviewer's approach for reviews
+# Reviewer's approach for reviews
 
 As a reviewer, the way you express yourself is extremely important.
 
@@ -24,7 +24,7 @@ now and in the future.
 Expressing yourself in a more pleasant and convenient for the others way, using `I`
 firstly is a very important.
 
-# Target the code, not the coder
+## Target the code, not the coder
 
 Beware of whom you are targeting with your comments.
 
@@ -49,7 +49,10 @@ sample before, are avoided.
 
 Finally, [we are the owners of our code](https://www.martinfowler.com/bliki/CodeOwnership.html).
 
-### Ask Questions
+Extra:
+Avoid to solve huge problems or conflicts in PRs, prefer a face to face catchup.
+
+## Ask Questions
 
 **Prefer questions over statements.**
 
@@ -114,6 +117,9 @@ you can start praising the good work of the author, and closing your comment wit
 
 ## Don't target the Author's style of behavior
 
+***This case is not related to writing a comment on a PR, but doing 
+a commment on someone in person.***
+
 You must not critisize and comment on someone's characteristics that result to 
 `negative` comments on his code review. Doing this might be understood as
 a personal attack from the author.
@@ -135,34 +141,44 @@ avoid this
 prefer this
 `I would suggest that in order to keep our code more consistent and increase our test coverarge, it would be better if you have written more tests.`
 
-### Don't comment everything
+## Don't comment everything
 
 You don't need to apply critisism on every line of the author's. This approach will
 make him keeping a defensive stance and he won't be open for feedback. 
 Always focus on the mistakes and the code smells that they are needed to changed.
 
-
-### Applying a filtering for your feedback
+## Applying a filtering for your feedback
 
 Borrowed from [this talk](https://www.slideshare.net/slideshow/compassionate-yet-candid-code-reviews/113119451).
 
+> **Compassionate code reviews**
+> Minimize suffering for everyone involed -- authors, reviewers
+> April Wensel
 
 There are 3 questions you can ask yourself before writing a comment.
 
 
-#### Is it true?
+### Is it true?
 
 don't
 ```
 You should have written more tests!
 ```
+Indeed, it's a fact or an opinion, but it is not always required to be true or false.
 
-do
+So, do...
 ```
 I think that it would be better if you 've provided more tests
 ```
 
-#### Is it necessary?
+* express your opinion
+* consider sharing a source in case of a fact
+* be kind
+* using suggestions with `I` or ask a question
+* it is not bad to avoid should
+
+
+### Is it necessary?
 
 Remember: *Don't comment everything*
 
@@ -173,7 +189,11 @@ Fix your missings spaces and your format here.
 Ok, we can live with them. That means, that is not necessary 
 to give such a feedback, except the case of a bigger issue.
 
-#### Is it kind?
+* don't be a louse
+* choose the right means to raise an issue
+* 
+
+### Is it kind?
 
 Don't attack the author!
 Provide your feedback in a proper way.
@@ -189,7 +209,7 @@ do:
 I think that this code block is not so clear to me. I would suggest to discuss it offline.
 ```
 
-### Be open to accept different solutions
+## Be open to accept different solutions
 
 Even if your approach might be better than someone else's, that does not
 mean that the author's approach is not valid. So, you don't
@@ -198,5 +218,10 @@ Remember, that every developer has his own touch on best practices, assumptions.
 
 In the end, there is no need to annoy the author.
 
+# Some extra notes
 
-
+It is important to understand (as a reviewer) and have always in mind, that:
+* your goal is to act in the best interests of the team
+* people don't write unreadable code on purpose, they need mentoring
+* in case of more than 3-4 comments, always prefer to resolve it face to face.
+* be consistent, and don't step back when it is important (eg we want tests to be written)
