@@ -125,12 +125,10 @@ the leads can take the final decision, since they are responsible for the team.
 
 What will the team earn from a process like this?
 
-* Each member feels important when participating on team decisions. In other words, acceptance.
-* Standardized process,
-  * which in turn increase productivity
+* Team decisions
+* Each member feels important when participating on team decisions, or in other words, acceptance.
+* Standardized process, which increases productivity
 * Helps the onboarding of new joiners
-* Easier debugging
-* While performing a review, 
-  * in case a dev sees something that might be wrong, it can move the comments discussion on a PR in this meeting
-  * or avoid discussing an issue again and again, since it will be already discussed in a meeting
+* Easier debugging/tracking
+* Improves the resolvement of issues/discussion of Pull Requests
 
