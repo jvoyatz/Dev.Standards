@@ -1,7 +1,5 @@
-# Team Meeting + Team Document
-
-## Standard Development Practices
-
+# Standard Development Practices 
+ 
 To work efficiently, it is crucial to apply and maintain a set of common practices. 
 For this reason, a new process needs to be introduced, <br> where the whole team, should participate
 in order to establish those practices that would be agreed and followed by everyone. <br>
@@ -16,9 +14,7 @@ the way code reviews are performed.
 
 
 ## Contents
-
-- [Team Meeting + Team Document](#team-meeting--team-document)
-  - [Standard Development Practices](#standard-development-practices)
+- [Standard Development Practices](#standard-development-practices)
   - [Contents](#contents)
   - [Definition of Process](#definition-of-process)
   - [Definition of **Android Team Talk** meeting](#definition-of-android-team-talk-meeting)
@@ -26,6 +22,7 @@ the way code reviews are performed.
     - [Metadata](#metadata)
     - [Topics](#topics)
     - [Which topic to select?](#which-topic-to-select)
+    - [Topics Pool](#topics-pool)
   - [**Android Team Talk** decisions](#android-team-talk-decisions)
   - [Key Takeaways](#key-takeaways)
 
@@ -76,6 +73,16 @@ on a git repo as well, and every member can propose a new one.
 In order to select a topic to discuss in the meeting, a poll could be created at Slack.
 If the meeting has been scheduled on Wednesday, the team could vote for the topic
 two or three days before.
+
+### Topics Pool
+
+| Topic             | Added on        | Discussed on     |
+| :-------------:   | :-------------: | :--------------: |
+| Idiomatic Kotlin  | TBA             |      TBA         |
+| Kotlin Tips       | TBA             |      TBA         |
+| Testing           | TBA             |      TBA         |
+| Code Reviews      | TBA             |      TBA         | 
+
 
 ## **Android Team Talk** decisions
 
